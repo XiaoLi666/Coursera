@@ -4,6 +4,56 @@
 
 </head>
 <body>
-
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    <form>
+        <fieldset>
+            <legend>Your Face</legend>
+            <label for="loadFile1">Your image:</label>
+            <input type="file" id="loadFile1"><br>
+            <label for="preview">Image preview:</label>
+            <img id="preview"/>
+        </fieldset>
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="text1">Name:</label>
+            <input type="text" id="text1"><br>
+            <label>Gender:</label>
+            <input type="radio" id="radio1" name="sex" value="male">Male
+            <input type="radio" id="radio2" name="sex" value="female">Female<br>
+            <label for="number1">Age:</label>
+            <input type="number" id="number1"><br>
+            <label for="date1">Date of birth:</label>
+            <input type="date" id="date1"><br>
+            <label for="color1">Favourite color:</label>
+            <input type="color" id="color1"><br>
+            <select name="countryList">
+                <option value =""></option>
+                <option value ="Singapore">Singapore</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <label for="rangeHeight">Height:</label>
+            <input type="range" id="rangeHeight" min="0" max="100"><br>
+            <label for="rangeSalary">Salary:</label>
+            <input type="range" id="rangeSalary" min="0" max="100"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <label>Email:</label>
+            <input type="email"><br>
+            <label>Mobile:</label>
+            <input type="tel"><br>
+            <label>Address:</label>
+            <textarea></textarea><br>
+            <label>Method to contact you:</label>
+            <input type="checkbox">Email<input type="checkbox">Whatsapp<input type="checkbox">In-app chat<br>
+        </fieldset>
+        <input type="submit" value='submit'>
+    </form>
 </body>
 </html>
