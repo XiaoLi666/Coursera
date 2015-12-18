@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <style>
+        .fieldset {
+            background: lightyellow;
+            border: 10px solid yellow;
+            margin-bottom: 10px;
+            width: 720px;
+        }
+        .label {
+            display: inline-block;
+            width: 180px;
+            text-align: right;
+            text-align: top;
+        }
+        .rangeLeftLabel {
+            background-color: darkred;
+            display: inline-block;
+            text-align: center;
+            width: 50px;
+            color: white;
+        }
+        .rangeRightLabel {
+            background-color: purple;
+            display: inline-block;
+            text-align: center;
+            width: 50px;
+            color: white;
+        }
+        .checkboxLabel {
+            width: auto;
+        }
+        .radioLabel {
+            width: auto;
+        }
+        .textarea {
+            display: inline-block;
+            width: 360px;
+            height: 50px;
+        }
+        label:hover {
+            font-size: 20px;
+        }
+        input:hover {
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1>
-    <form>
-        <fieldset>
+    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
+        <fieldset class="fieldset">
             <legend>Your Face</legend>
-            <label for="loadFile1">Your image:</label>
+            <label class="label" for="loadFile1">Your image:</label>
             <input type="file" id="loadFile1" name="loadFile1"><br>
-            <label for="previewImage1">Image preview:</label>
-            <img id="previewImage1" name="previewImage1"/>
+            <label class="label" for="preview">Image preview:</label>
+            <img id="preview" name="preview"/>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset">
             <legend>Your General Details</legend>
-            <label for="text1">Name:</label>
-            <input type="text" id="text1" name="text1"><br>
-            <label>Gender:</label>
-            <input type="radio" id="radioSex1" name="radioSex1" value="male">Male
-            <input type="radio" id="radioSex2" name="radioSex2" value="female">Female<br>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age"><br>
-            <label for="dob">Date of birth:</label>
-            <input type="date" id="dob" name="dob"><br>
-            <label for="FavouriteColor">Favourite color:</label>
-            <input type="color" id="FavouriteColor" name="FavouriteColor"><br>
-            <label for="countryList">Which country:</label>
+            <label class="label" for="text1">Name:</label>
+            <input type="text" id="text1" name="text1">
+            <br>
+            <label class="label">Gender:</label>
+            <input type="radio" id="radioSex1" name="radioSex1" value="male"><label class="radioLabel">Male</label>
+            <input type="radio" id="radioSex2" name="radioSex2" value="female"><label class="radioLabel">Female</label>
+            <br>
+            <label class="label" for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br>
+            <label class="label" for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br>
+            <label class="label" for="FavouriteColor">Favourite color:</label>
+            <input type="color" id="FavouriteColor" name="FavouriteColor">
+            <br>
+            <label class="label" for="countryList">Which country:</label>
             <select id="countryList" name="countryList">
                 <option value="" name="empty"></option>
                 <option value="Singapore" name="Singapore">Singapore</option>
@@ -36,27 +85,38 @@
                 <option value="USA" name="USA">USA</option>
             </select>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset">
             <legend>Your Indicators</legend>
-            <label for="rangeHeight">Height:</label>
-            <input type="range" id="rangeHeight" name="rangeHeight" min="0" max="100"><br>
-            <label for="rangeSalary">Salary:</label>
-            <input type="range" id="rangeSalary" name="rangeSalary" min="0" max="100"><br>
+            <label class="label" for="rangeHeight">Height:</label>
+            <label class="rangeLeftLabel">Short</label>
+            <input type="range" id="rangeHeight" name="rangeHeight" min="0" max="100">
+            <label class="rangeRightLabel">Tall</label>
+            <br>
+            <label class="label" for="rangeSalary">Salary:</label>
+            <label class="rangeLeftLabel">Poor</label>
+            <input type="range" id="rangeSalary" name="rangeSalary" min="0" max="100">
+            <label class="rangeRightLabel">Rich</label>
+            <br>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset">
             <legend>Your Contact Information</legend>
-            <label>Email:</label>
-            <input type="email" id="email" name="email"><br>
-            <label>Mobile:</label>
-            <input type="tel" id="mobile" name="mobile"><br>
-            <label>Address:</label>
-            <textarea id="address" name="address"></textarea><br>
-            <label>Method to contact you:</label>
-            <input type="checkbox" id="checkboxEmail" name="checkboxEmail">Email
-            <input type="checkbox" id="checkboxWhatsapp" name="checkboxWhatsapp">Whatsapp
-            <input type="checkbox" id="checkboxInappChat" name="checkboxInappChat">In-app chat<br>
+            <label class="label" for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label class="label" for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile">
+            <br>
+            <label class="label" for="address">Address:</label>
+            <textarea class="textarea" id="address" name="address"></textarea>
+            <br>
+            <label class="label">Method to contact you:</label>
+            <input type="checkbox" id="checkboxEmail" name="checkboxEmail"><label class="checkboxLabel">Email</label>
+            <input type="checkbox" id="checkboxWhatsapp" name="checkboxWhatsapp"><label class="checkboxLabel">Whatsapp</label>
+            <input type="checkbox" id="checkboxInappChat" name="checkboxInappChat"><label class="checkboxLabel">In-app chat</label>
+            <br>
         </fieldset>
         <input type="submit" value='submit'>
     </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 </html>
