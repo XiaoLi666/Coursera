@@ -1,61 +1,37 @@
+<!--
+ Author: ZILI WANG
+ Create Date: 19th Dec 2015
+ Mofidy Date: 23th Dec 2015
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML DEMO</title>
+    <title>Learning Javascript</title>
     <style>
-        h1:hover    {color: purple}
-        p           {color: white}
-        #test       {color: green}
-        .mystyle    {color: red}
     </style>
+    <!-- ...load javascript libraries here... -->
 </head>
 <body>
-    <section>
-        <h1>My first heading</h1>
-        <p>My first paragraph</p>
-        <h2>My second heading</h2>
-        <p>My second paragraph</p>
-        <h3>My third paragraph</h3>
-        <button>click me</button>
-        <h1>It's fine</h1>
-    </section>
-    <section>
-        <h1><u>Another</u> <b>Section</b></h1>
-        <p><strong>Another</strong> <em>paragraph</em></p>
-        <ul>
-            <li>Apple</li>
-            <li id = "test">Orange</li>
-            <li class = "mystyle">Banana</li>
-        </ul>
-        <ol type = "a" reversed>
-            <li><ins>Apple</ins></li>
-            <li><del>Orange</del></li>
-            <li><u>Banana</u></li>
-        </ol>
-        <p><big>Big</big> <mark>and</mark> <small>Small</small></p>
-        <p>x<sub>1</sub><sup>2</sup></p>
-    </section>
-    <section>
-    <table>
-        <thead>
-            <tr><th>Hello</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>world</td></tr>
-        </tbody>
-    </table>
-    </section>
-    <section>
-        <form>
-            <fieldset>
-            <legend>First field set</legend>
-            <label for="input">Input</label>
-            <input type="text" id="input" placeholder="please enter sth">
-            <input type="submit" value="OK">
-            <input type="file" value="FileUpload">
-        </fieldset>
-            <fieldset>This is information</fieldset>
-        </form>
-    </section>
+    <!-- ...your javascript code typically goes at the end of the body... -->
+    <script>
+        var todo = ["see doctor", "do assignment", "pay rent",
+            "check bank account", "clean room"];
+        var priority = [3, 4, 1, 2, 5];
+        var index = 0;
+        var todoInOrderOfPriority = [];
+
+        todoInOrderOfPriority.length = todo.length;
+
+        while ( index < todo.length ) {
+                position = priority.indexOf( index+1 );
+                todoInOrderOfPriority[index] = todo[position];
+                index++;
+        }
+        alert("Previous order:\n\n" + todo + "\n\n" + "Now in order of priority:\n\n" + todoInOrderOfPriority);
+    </script>
+    <!--
+    <script src="javascript_file_name_with_path.js"></script>
+    -->
 </body>
 </html>
