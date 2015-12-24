@@ -2,7 +2,7 @@
  Author: ZILI WANG
  Date: 23th Dec 2015
  */
- 
+
 // global variable
 var color_list = ["blue","cyan","gold","gray","green","magenta","orange","red","white","yellow"];
 // var color_hex_list = ["0000ff","00ffff","ffd700","c0c0c0","00ff00","ff00ff","ffa500","ff0000","ffffff","ffff00"];
@@ -14,17 +14,11 @@ function do_game() {
     // generate target color
     target_index = Math.floor((Math.random() * color_list.length)) + 1 // random number between [1, 10]
 
-    // generate the color string
-    var color_str = color_list[0];
-    for (var i = 1; i < color_list.length; i++) {
-        color_str = color_str + ", " + color_list[i];
-    }
-
     // get user input
     var finished = false;
     while (!finished) {
         var color_input = prompt("I am thinking of one of these colors:\n\n" +
-                                 color_str + "\n\n" +
+                                 color_list + "\n\n" +
                                  "What color am I thinking of?");
         guess_number++;
         finished = check_color(color_input);
