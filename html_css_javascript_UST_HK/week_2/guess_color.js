@@ -64,4 +64,7 @@ function check_color(color) {
 
 function update_bg_color(color) {
     document.body.style.backgroundColor = color;
+
+    // workable on chrome, not workable on safari
+    // document.getElementById("body").style.backgroundColor = color;
 }
