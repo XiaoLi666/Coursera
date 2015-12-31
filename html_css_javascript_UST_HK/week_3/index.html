@@ -17,11 +17,16 @@
             pos_x = pos_x+1;
             console.log(pos_x);
             img.style.left = pos_x+"px";
-            the_timer = setTimeout(set_timer, 50);
+            //the_timer = setTimeout(set_timer, 50);
+            the_timer = setInterval(set_timer, 5000);
+        }
+        function stop_timer() {
+            clearTimeout(the_timer);
         }
     </script>
 </head>
 <body onload="set_timer()">
     <img src="portrait.jpg" id="img1" style="position:absolute; left:0">
+    <button onclick="stop_timer()">
 </body>
 </html>
